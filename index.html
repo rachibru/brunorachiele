@@ -7,7 +7,6 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
     background: #f8f9fa;
@@ -24,19 +23,19 @@
   main {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 10px;
   }
 
-  .content {
-    flex: 1 1 650px;
+  .left-column {
+    flex: 2 1 700px;
     padding: 10px 20px;
     min-width: 300px;
   }
 
-  .infobox {
-    flex: 0 0 300px;
+  .right-column {
+    flex: 1 1 300px;
     background: #e8f0fe;
     padding: 20px;
     margin-left: 20px;
@@ -45,7 +44,7 @@
     min-width: 250px;
   }
 
-  .infobox img {
+  .right-column img {
     width: 100%;
     border-radius: 5px;
   }
@@ -68,17 +67,11 @@
     text-decoration: underline;
   }
 
-  .separator {
-    clear: both;
-    text-align: center;
-    margin: 20px 0;
-  }
-
   @media(max-width: 768px) {
     main {
       flex-direction: column;
     }
-    .infobox {
+    .right-column {
       margin-left: 0;
       margin-top: 20px;
     }
@@ -93,26 +86,30 @@
 </header>
 
 <main>
-  <div class="content">
+  <!-- Colonna sinistra: tutto il testo -->
+  <div class="left-column">
 
-    <!-- Biografia Estesa con immagine -->
-    <div class="separator">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2ti7nAH56b7gE_w0HBaRJcuC4UqgzJGqib1R6WURUHIxI3CC0X6vQQmR780G1p1TCIq8kKfAZTYKup1A7N3PLHRpdmKZVXxioXEyDyUgePgzuBGZUuKjmGX6bVpyIQNxPvIW9AmGD5tklPlI3hWhOSnno_S8RXJpUk4V2CSLIrTOePHCLJUBbwe0li3c/w200-h200/Sf2R_mG5_400x400%20(1).jpg" alt="Bruno Rachiele" width="200">
-    </div>
+    <!-- Breve descrizione -->
+    <h2>Descrizione</h2>
+    <p>Bruno Rachiele (Soveria Mannelli, 19 ottobre 2004) è un attivista politico italiano e studente di giurisprudenza presso l’Università Magna Graecia di Catanzaro. È stato rappresentante della Consulta Provinciale degli Studenti di Catanzaro per l'ITE V. De Fazio di Lamezia Terme dal 2021 al 2023.</p>
 
+    <!-- Biografia -->
     <h2>Biografia</h2>
-    <p>Sono nato nell’ottobre del 2004 a Soveria Mannelli, cresciuto a San Pietro a Maida, nella provincia di Catanzaro, in Calabria. Dopo aver completato la scuola elementare e media nella mia città, ho proseguito i miei studi presso l’Istituto Tecnico Economico "V. De Fazio" di Lamezia Terme, dal 2018 al 2023.</p>
-    <p>Durante quegli anni mi sono sempre impegnato attivamente nella vita scolastica e uno dei momenti più significativi è stato quando sono stato eletto dalla mia comunità scolastica Rappresentante della mia scuola alla Consulta degli Studenti di Catanzaro, un ruolo che ho ricoperto dal 2021 al 2023. In quel periodo ho avuto l’opportunità di rappresentare gli interessi degli studenti della mia scuola e di partecipare a discussioni e decisioni che riguardavano l’intero sistema scolastico. Questa esperienza mi ha avvicinato ancora di più al mondo della politica, permettendomi di iniziare un percorso di impegno civico e partecipazione alla vita della comunità.</p>
-    <p>Spinto dalla mia passione per il diritto, mi sono iscritto alla Facoltà di Giurisprudenza presso l’Università "Magna Graecia" di Catanzaro.</p>
-    <p>Sin da piccolo, inoltre, ho sempre dedicato parte del mio tempo ad attività di volontariato, convinto che aiutare gli altri sia un valore fondamentale.</p>
+    <p>Rappresentanza studentesca vicina alle idee di Azione Studentesca. Eletto rappresentante alla Consulta nell'ottobre del 2021, ha fatto parte della commissione trasporti e della commissione edilizia scolastica, con incarichi provinciali e regionali.</p>
 
-    <h2>Curriculum Vitae</h2>
-    <p><a href="https://drive.google.com/file/d/1jJ1wQqsoRZ6SbLGYVFN4M7a-h49bRdt3/view?usp=sharing" target="_blank">clicca qui</a> - ultimo aggiornamento gennaio 2025</p>
+    <!-- Attività politiche -->
+    <h2>Attività politiche</h2>
+    <p>Dal 2023 è militante di Fratelli d’Italia e responsabile delle comunicazioni del circolo di Fratelli d’Italia di San Pietro a Maida.</p>
 
-    <h2>Pannello della Conoscenza Google</h2>
-    <p><a href="https://g.co/kgs/dWc8yBu" target="_blank">clicca qui</a></p>
+    <!-- Opere -->
+    <h2>Opere</h2>
+    <ul>
+      <li><em>Rinascita dalle Ombre: Dalle avversità al cambiamento</em></li>
+      <li><em>Haiku, la poesia dell’Infinito</em></li>
+    </ul>
 
-    <h2>Articoli e testate che hanno parlato di Bruno Rachiele</h2>
+    <!-- Citazioni / Articoli -->
+    <h2>Citazioni e articoli</h2>
     <ul>
       <li><a href="https://www.corrieredellacalabria.it/2024/10/22/san-pietro-a-maida-il-risveglio-dopo-la-paura-gli-abitanti-spalano-il-fango-sapremo-rialzarci/" target="_blank">San Pietro a Maida, il risveglio dopo la paura (Corriere della Calabria)</a></li>
       <li><a href="https://www.corrieredellacalabria.it/2022/01/14/tornate-a-scuola-gli-studenti-restano-scettici-ma-la-politica-non-si-scompone-video/" target="_blank">Tornate a scuola: gli studenti restano scettici (Corriere della Calabria)</a></li>
@@ -121,19 +118,10 @@
       <li><a href="https://gazzettadelsud.it/foto/noi-magazine/2022/03/31/sport-scienza-autismo-e-non-solo-alla-gds-academy-la-scuola-che-non-lascia-indietro-nessuno-c9f0619c-ee47-4863-a004-787c970b813e/" target="_blank">Sport, scienza, autismo e non solo (Gazzetta del Sud)</a></li>
     </ul>
 
-    <h2>Presenza online e riferimenti</h2>
-    <ul>
-      <li>Pagina biografica (EverybodyWiki): <a href="https://it.everybodywiki.com/Bruno_Rachiele" target="_blank">https://it.everybodywiki.com/Bruno_Rachiele</a></li>
-      <li>Voce Wikidata: <a href="https://www.wikidata.org/wiki/Q136450602" target="_blank">https://www.wikidata.org/wiki/Q136450602</a></li>
-      <li>Sito ufficiale: <a href="https://www.brunorachiele.it" target="_blank">brunorachiele.it</a></li>
-      <li>Instagram: <a href="https://www.instagram.com/rachielebruno_ufficiale/" target="_blank">@rachielebruno_ufficiale</a></li>
-      <li>Twitter / X: <a href="https://twitter.com/RachieleBruno" target="_blank">@RachieleBruno</a></li>
-    </ul>
-
   </div>
 
-  <!-- Infobox laterale -->
-  <div class="infobox">
+  <!-- Colonna destra: Infobox -->
+  <div class="right-column">
     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2ti7nAH56b7gE_w0HBaRJcuC4UqgzJGqib1R6WURUHIxI3CC0X6vQQmR780G1p1TCIq8kKfAZTYKup1A7N3PLHRpdmKZVXxioXEyDyUgePgzuBGZUuKjmGX6bVpyIQNxPvIW9AmGD5tklPlI3hWhOSnno_S8RXJpUk4V2CSLIrTOePHCLJUBbwe0li3c/w200-h200/Sf2R_mG5_400x400%20(1).jpg" alt="Bruno Rachiele">
     <h3>Informazioni essenziali</h3>
     <p><strong>Nome:</strong> Bruno Rachiele</p>
@@ -141,38 +129,10 @@
     <p><strong>Nazionalità:</strong> Italiana</p>
     <p><strong>Istruzione:</strong> Università Magna Graecia, Facoltà di Giurisprudenza</p>
     <p><strong>Ruolo:</strong> Attivista politico</p>
-    <p><strong>Libro pubblicato:</strong> Rinascita dalle Ombre</p>
+    <p><strong>Libri:</strong> Rinascita dalle Ombre, Haiku, la poesia dell’Infinito</p>
+    <p><strong>CV:</strong> <a href="https://drive.google.com/file/d/1jJ1wQqsoRZ6SbLGYVFN4M7a-h49bRdt3/view?usp=sharing" target="_blank">clicca qui</a></p>
   </div>
 </main>
-
-<!-- JSON-LD per Knowledge Panel -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Bruno Rachiele",
-  "url": "https://www.brunorachiele.it",
-  "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8DhZPyEuNxatxYlh6bSppF0VaJSCEdwv6_rlUoOhmzmypej-yimwOEfT97sq3Ez2E7KnKq_bNYfFqqQljkERiWZqqBlMEmcs9t8pT_Mh3LxNmNzDan8PC8dQNX8gwmA6JGUVoknYEEtb6sh1ANDBHN2DlsP__-W4IY6HdPkZ1yAZAM_lFM8EwRaWTwHs/w200-h189-rw/R5V_6918.jpg",
-  "birthDate": "2004-10-19",
-  "birthPlace": {
-    "@type": "Place",
-    "name": "Soveria Mannelli, Calabria, Italy"
-  },
-  "nationality": "Italian",
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Università degli Studi Magna Graecia di Catanzaro"
-  },
-  "jobTitle": "Attivista Politico",
-  "sameAs": [
-    "https://it.everybodywiki.com/Bruno_Rachiele",
-    "https://www.wikidata.org/wiki/Q136450602",
-    "https://www.instagram.com/rachielebruno_ufficiale/",
-    "https://twitter.com/RachieleBruno",
-    "https://www.facebook.com/rachielebruno/"
-  ]
-}
-</script>
 
 </body>
 </html>
