@@ -76,13 +76,64 @@
       margin-top: 20px;
     }
   }
+
+  .site-header {
+  background-image: url("copertina.jpg");
+  background-size: cover;          /* niente sgranature */
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 280px;                /* altezza desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-overlay {
+  background: rgba(0, 0, 0, 0.55);  /* migliora leggibilità testo */
+  color: #ffffff;
+  padding: 20px;
+  width: 100%;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.site-header p {
+  max-width: 900px;
+  margin: 10px auto 0;
+  font-size: 1.1rem;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .site-header {
+    min-height: 200px;
+  }
+
+  .site-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .site-header p {
+    font-size: 1rem;
+  }
+}
+
 </style>
 </head>
 <body>
 
-<header>
-  <h1>Bruno Rachiele</h1>
-  <p>Attivista politico italiano e studente di giurisprudenza presso l'Università Magna Graecia di Catanzaro, ex rappresentante della Consulta degli Studenti di Catanzaro.</p>
+<header class="site-header">
+  <div class="header-overlay">
+    <h1>Bruno Rachiele</h1>
+    <p>
+      Attivista politico italiano e studente di giurisprudenza presso l'Università Magna Graecia di Catanzaro, 
+      già rappresentante della Consulta Provinciale degli Studenti di Catanzaro.
+    </p>
+  </div>
 </header>
 
 <main>
