@@ -1,177 +1,367 @@
-<!DOCTYPE html>
+bio_html = """<!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bruno Rachiele - Attivista e Studente di Giurisprudenza</title>
-<meta name="description" content="Sito ufficiale di Bruno Rachiele, attivista politico italiano e studente di giurisprudenza. Biografia, attività politiche, opere, interventi TV e radio.">
-<meta name="keywords" content="Bruno Rachiele, Azione Studentesca, Fratelli d'Italia, Catanzaro, San Pietro a Maida, Consulta Studenti, università, giurisprudenza, rappresentanza studentesca, libri, interviste, articoli">
-<link rel="canonical" href="https://wiki.brunorachiele.it/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TAG SEO FONDAMENTALI PER GOOGLE -->
+    <title>Bruno Rachiele | Biografia, Attivismo Politico e Rappresentanza Studentesca</title>
+    <meta name="description" content="Sito ufficiale di Bruno Rachiele, attivista politico di Fratelli d'Italia, studente di Giurisprudenza presso l'Università Magna Graecia di Catanzaro ed ex rappresentante degli studenti.">
+    <meta name="keywords" content="Bruno Rachiele, Fratelli d'Italia, Catanzaro, Giurisprudenza, Rappresentanza Studentesca, Azione Studentesca, Università Magna Graecia">
+    <meta name="author" content="Bruno Rachiele">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Font Eleganti -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0d131a;
+            --card-bg: #151d28;
+            --accent-blue: #0052a5;
+            --accent-gold: #c5a059;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: #263346;
+        }
 
-<style>
-body { font-family: Arial, sans-serif; margin:0; background:#f8f9fa; color:#333; line-height:1.6; }
-a { color:#1a73e8; text-decoration:none; }
-a:hover { text-decoration:underline; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Header */
-header { background-image:url('copertina.jpg'); background-size:cover; background-position:center; min-height:320px; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; color:white; }
-header::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);}
-header .content { position:relative; max-width:900px; padding:20px;}
-header h1 { margin-bottom:10px; font-size:2.6rem; }
-header p { font-size:1.2rem; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 20px;
+        }
 
-/* Layout principale */
-.container { display:flex; max-width:1200px; margin:30px auto; gap:30px; padding:0 15px; }
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            overflow: hidden;
+        }
 
-/* Indice sticky */
-nav { flex:0 0 250px; background:#e8f0fe; padding:20px; border-radius:6px; height:fit-content; position:sticky; top:20px; }
-nav h3 { margin-top:0; }
-nav ul { list-style:none; padding-left:0; }
-nav li { margin:10px 0; }
+        /* INTESTAZIONE SCHIZZO */
+        header {
+            background: linear-gradient(135deg, #0a1118 0%, #172436 100%);
+            padding: 36px 40px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+        }
 
-/* Contenuto principale */
-main { flex:1; }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 120px;
+            height: 2px;
+            background: var(--accent-gold);
+        }
 
-/* Sezioni */
-section { margin-bottom:50px; display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; }
-section img { max-width:300px; width:100%; border-radius:6px; }
-section .text { flex:1; min-width:250px; }
+        h1.name {
+            font-family: 'Cinzel', serif;
+            font-size: 2.4rem;
+            letter-spacing: 1px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
 
-/* Card articoli */
-.card { background:white; padding:15px; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.1); margin-bottom:20px; }
+        .subtitle {
+            font-size: 1rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-top: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
 
-/* Responsive */
-@media(max-width:992px){
-  .container { flex-direction:column; }
-  nav { position:relative; top:auto; width:100%; margin-bottom:30px;}
-  section { flex-direction:column; }
-  section img { max-width:100%; }
-}
-</style>
+        /* SEZIONE FOTO E FIRMA */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.015);
+            border-bottom: 1px solid var(--border-color);
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-<!-- SEO JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Bruno Rachiele",
-  "url": "https://wiki.brunorachiele.it",
-  "image": "https://raw.githubusercontent.com/rachibru/brunorachiele/refs/heads/main/profilo.jpg",
-  "sameAs": [
-    "https://www.instagram.com/rachielebruno_ufficiale/",
-    "https://twitter.com/RachieleBruno",
-    "https://www.facebook.com/rachielebruno/"
-  ],
-  "birthDate": "2004-10-19",
-  "birthPlace": "Soveria Mannelli, Calabria, Italy",
-  "jobTitle": "Attivista politico",
-  "alumniOf": "Università Magna Graecia di Catanzaro",
-  "description": "Bruno Rachiele, nato a Soveria Mannelli nel 2004, attivista politico italiano e studente di giurisprudenza, impegnato nella rappresentanza studentesca e nelle attività politiche locali."
-}
-</script>
+        .photo-box {
+            width: 220px;
+            height: 220px;
+            border-radius: 12px;
+            border: 2px solid var(--accent-gold);
+            background: #1a2636;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+        }
 
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .signature-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            min-width: 200px;
+        }
+
+        .signature-title {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .signature-img {
+            font-family: 'Reenie Beanie', cursive;
+            font-size: 4.5rem;
+            color: var(--text-main);
+            transform: rotate(-5deg);
+            user-select: none;
+            line-height: 1;
+        }
+
+        /* SEZIONE INFORMAZIONI MIA BIO */
+        .info-section {
+            padding: 40px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        p.bio-text {
+            color: var(--text-main);
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        @media (min-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .info-card h3 {
+            font-size: 1rem;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+        }
+
+        .info-card p, .info-card ul {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-card ul li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+        }
+
+        .info-card ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, rgba(0,82,165,0.2) 0%, rgba(197,160,89,0.1) 100%);
+            border-left: 4px solid var(--accent-gold);
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 30px 0;
+            font-style: italic;
+            color: #e2e8f0;
+        }
+
+        .quote-author {
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            text-align: right;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: #0a1118;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            header, .hero-section, .info-section {
+                padding: 24px;
+            }
+            .hero-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .signature-box {
+                align-items: center;
+            }
+            h1.name {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <div class="content">
-    <h1>Bruno Rachiele</h1>
-    <p>Attivista politico italiano e studente di giurisprudenza presso l'Università Magna Graecia di Catanzaro, già rappresentante della Consulta Provinciale degli Studenti di Catanzaro.</p>
-  </div>
-</header>
-
 <div class="container">
-  <!-- Indice -->
-  <nav>
-    <h3>Indice</h3>
-    <ul>
-      <li><a href="#biografia">Biografia</a></li>
-      <li><a href="#consulta">Rappresentanza Studentesca</a></li>
-      <li><a href="#interventi-tv">Interventi TV</a></li>
-      <li><a href="#interventi-radio">Interventi Radiofonici</a></li>
-      <li><a href="#articoli">Articoli e citazioni</a></li>
-      <li><a href="#attivita-politica">Attività Politica</a></li>
-      <li><a href="#opere">Opere</a></li>
-    </ul>
-  </nav>
+    <!-- INTESTAZIONE (Come da Schizzo) -->
+    <header>
+        <h1 class="name">Bruno Rachiele</h1>
+        <div class="subtitle">Attivista Politico • Studente di Giurisprudenza</div>
+    </header>
 
-  <!-- Contenuto principale -->
-  <main>
-    <!-- Biografia -->
-    <section id="biografia">
-      <div class="text">
-        <h2>Biografia</h2>
-        <p>Bruno Rachiele è nato nell’ottobre 2004 a Soveria Mannelli ed è cresciuto a San Pietro a Maida, nella provincia di Catanzaro, in Calabria. Dopo la scuola primaria e secondaria nella sua città, ha frequentato l’Istituto Tecnico Economico “V. De Fazio” di Lamezia Terme (2018-2023).</p>
-        <p>Durante gli anni scolastici si è impegnato attivamente nella vita studentesca, venendo eletto rappresentante alla Consulta Provinciale degli Studenti di Catanzaro (2021-2023). Successivamente si è iscritto alla Facoltà di Giurisprudenza dell’Università Magna Graecia di Catanzaro. Ha sempre dedicato parte del proprio tempo al volontariato.</p>
-      </div>
-      <img src="profilo.jpg" alt="Bruno Rachiele">
+    <!-- FOTO & FIRMA (Sezione Superiore dello Schizzo) -->
+    <section class="hero-section">
+        <div class="photo-box">
+            <!-- Sostituisci il link qui sotto con il nome del tuo file immagine (es. foto_bruno.jpg) -->
+            <img src="foto_bruno.jpg" alt="Bruno Rachiele" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display:none; font-size: 0.85rem; padding: 10px;">
+                📷 <br><strong>[La tua Foto Mia]</strong><br>
+                Inserisci <code>foto_bruno.jpg</code> nella cartella
+            </div>
+        </div>
+
+        <div class="signature-box">
+            <div class="signature-title">Firma Ufficiale</div>
+            <!-- Se hai la foto/SVG della tua firma originale inserisci la tag <img>, altrimenti questo testo stilizzato rende esattamente lo stile dello schizzo -->
+            <div class="signature-img">Bruno Rachiele</div>
+        </div>
     </section>
 
-    <!-- Consulta Studenti -->
-    <section id="consulta">
-      <div class="text">
-        <h2>Rappresentante alla Consulta degli Studenti</h2>
-        <p>Eletto rappresentante alla Consulta Provinciale degli Studenti di Catanzaro nell’ottobre 2021. Ha fatto parte della commissione trasporti e della commissione edilizia scolastica, con incarichi provinciali e regionali.</p>
-      </div>
-      <img src="azionestudpng.png" alt="Azione Studentesca">
+    <!-- INFORMAZIONI MIE (Sezione Inferiore dello Schizzo) -->
+    <section class="info-section">
+        <div class="section-title">Profilo & Biografia</div>
+        <p class="bio-text">
+            Studente della Facoltà di Giurisprudenza presso l'<strong>Università Magna Græcia di Catanzaro</strong> ed ex rappresentante degli studenti al Consiglio degli Studenti. Fin da giovanissimo impegnato attivamente nel panorama sociale, politico e studentesco, promuovendo i valori della partecipazione, della trasparenza istituzionale e della crescita culturale e civile dei giovani.
+        </p>
+
+        <!-- CITAZIONE / INTERVENTO STAMPA -->
+        <div class="quote-box">
+            "Appartengo a una generazione che ha perso fiducia in molte istituzioni. Ma se c'è un'istituzione che deve restare credibile, è la Giustizia. Non si tratta di essere contro qualcuno, ma di garantire equilibrio, responsabilità e trasparenza per far sì che un giovane non perda fiducia nello Stato."
+            <div class="quote-author">— Bruno Rachiele (Intervento sulla Riforma della Giustizia)</div>
+        </div>
+
+        <!-- GRIGLIA INFORMAZIONI DETTAGLIATE -->
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>🏛️ Attivismo Politico</h3>
+                <ul>
+                    <li>Membro attivo di <strong>Fratelli d'Italia</strong> e dei movimenti giovanili di riferimento.</li>
+                    <li>Partecipazione a congressi locali, dibattiti e iniziative di coordinamento territoriale.</li>
+                    <li>Promotore di interventi pubblici su riforme istituzionali, diritto allo studio e rinnovamento della classe dirigente.</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>🎓 Rappresentanza Studentesca</h3>
+                <ul>
+                    <li>Ex rappresentante eletto nel <strong>Consiglio degli Studenti</strong> dell'Università Magna Græcia di Catanzaro.</li>
+                    <li>Vicepresidente e dirigente in <strong>Azione Studentesca</strong>.</li>
+                    <li>Impegno costante per la tutela dei diritti degli studenti universitari e delle scuole superiori.</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>⚖️ Percorso Accademico</h3>
+                <ul>
+                    <li>Corso di Laurea Magistrale in <strong>Giurisprudenza</strong>.</li>
+                    <li>Focus e interesse scientifico rivolto al Diritto Costituzionale, alla Giustizia e al Diritto Pubblico.</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>📌 Curiosità & Valori</h3>
+                <ul>
+                    <li>Fortemente legato alla storia, alle tradizioni e al rilancio culturale della Calabria.</li>
+                    <li>Sostenitore del merito, della meritocrazia negli studi e del servizio disinteressato per la comunità.</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <!-- Interventi TV -->
-    <section id="interventi-tv">
-      <div class="text">
-        <h2>Interventi televisivi</h2>
-        <p>Alcuni interventi televisivi di Bruno Rachiele su tematiche studentesche e sociali.</p>
-      </div>
-      <img src="tv1.png" alt="Intervento TV Bruno Rachiele">
-      <img src="tv2.png" alt="Intervento TV Bruno Rachiele">
-      <img src="tv3.png" alt="Intervento TV Bruno Rachiele">
-    </section>
-
-    <!-- Interventi Radio -->
-    <section id="interventi-radio">
-      <div class="text">
-        <h2>Interventi radiofonici</h2>
-        <p>Bruno Rachiele durante un intervento radiofonico su RTL 102.5 ha parlato della situazione del trasporto pubblico per gli studenti a Catanzaro.</p>
-        <blockquote class="twitter-tweet">
-          <p lang="it" dir="ltr">🚍👤 "Noi <a href="https://twitter.com/hashtag/studenti">#studenti</a> utilizziamo il trasporto pubblico per recarci a scuola. Ogni mattina rischiamo di rimanere a piedi perchè la riorganizzazione del sistema dei trasporti è assolutamente inadeguata" 📲 Bruno via Zoom da <a href="https://twitter.com/hashtag/Catanzaro">#Catanzaro</a> <a href="https://twitter.com/hashtag/indigantospeciale">#indigantospeciale</a> <a href="https://t.co/Ox7CLkDpZo">pic.twitter.com/Ox7CLkDpZo</a></p>
-          — RTL 102.5 (@rtl1025)
-        </blockquote>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
-      <img src="intervista.jpg" alt="Intervista radio Bruno Rachiele">
-    </section>
-
-    <!-- Articoli -->
-    <section id="articoli">
-      <h2>Articoli e citazioni</h2>
-      <div class="card">
-        <ul>
-          <li><a href="https://www.corrieredellacalabria.it/2022/01/14/tornate-a-scuola-gli-studenti-restano-scettici-ma-la-politica-non-si-scompone-video/" target="_blank">Tornate a scuola: gli studenti restano scettici (Corriere della Calabria)</a></li>
-          <li><a href="https://www.lametino.it/Ultimora/lamezia-l-aula-consiliare-portera-il-nome-di-monsignor-luisi-trasferiti-anche-gli-arredi-della-sala-di-corso-numistrano.html" target="_blank">Lamezia, l’aula consiliare porterà il nome di Monsignor Luisi (Il Lametino)</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Attività politica -->
-    <section id="attivita-politica">
-      <div class="text">
-        <h2>Attività politica</h2>
-        <p>Dal 2023 Bruno Rachiele è militante di Fratelli d’Italia e ricopre il ruolo di responsabile della comunicazione del circolo di San Pietro a Maida.</p>
-        <p>Fonte: <a href="https://www.lameziainforma.it/politica/2025/01/27/congresso-fratelli-ditalia-celebrato-a-san-pietro-a-maida/59811/" target="_blank">LameziaInforma.it</a></p>
-      </div>
-      <img src="partito.jpg" alt="Fratelli d’Italia">
-    </section>
-
-    <!-- Opere -->
-    <section id="opere">
-      <h2>Opere</h2>
-      <ul>
-        <li><em>Rinascita dalle Ombre: superare le avversità e ispirare il cambiamento - 2023</em></li>
-        <li><em>Haiku, la poesia dell’Infinito - 2024</em></li>
-      </ul>
-    </section>
-
-  </main>
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Bruno Rachiele — Pagina Ufficiale e Biografia.
+    </footer>
 </div>
+
 </body>
 </html>
+"""
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(bio_html)
+
+print("index.html per la biografia creato con successo!")
