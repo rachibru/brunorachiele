@@ -1,20 +1,20 @@
-bio_html = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- TAG SEO FONDAMENTALI PER GOOGLE -->
-    <title>Bruno Rachiele | Biografia, Attivismo Politico e Rappresentanza Studentesca</title>
-    <meta name="description" content="Sito ufficiale di Bruno Rachiele, attivista politico di Fratelli d'Italia, studente di Giurisprudenza presso l'Università Magna Graecia di Catanzaro ed ex rappresentante degli studenti.">
-    <meta name="keywords" content="Bruno Rachiele, Fratelli d'Italia, Catanzaro, Giurisprudenza, Rappresentanza Studentesca, Azione Studentesca, Università Magna Graecia">
+    <title>Bruno Rachiele | Biografia, Attivismo Politico, Sport e Rappresentanza Studentesca</title>
+    <meta name="description" content="Sito ufficiale di Bruno Rachiele, attivista politico di Fratelli d'Italia, studente di Giurisprudenza presso UMG Catanzaro, dirigente sportivo dell'A.S.D. Pizzo Calcio ed ex rappresentante degli studenti.">
+    <meta name="keywords" content="Bruno Rachiele, Fratelli d'Italia, Catanzaro, Pizzo Calcio, Giurisprudenza, Rappresentanza Studentesca, Azione Studentesca, Università Magna Graecia">
     <meta name="author" content="Bruno Rachiele">
     <meta name="robots" content="index, follow">
     
     <!-- Font Eleganti -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -42,8 +42,8 @@ bio_html = """<!DOCTYPE html>
         }
 
         .container {
-            max-width: 850px;
-            margin: 40px auto;
+            max-width: 900px;
+            margin: 30px auto;
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 16px;
@@ -128,7 +128,7 @@ bio_html = """<!DOCTYPE html>
             flex-direction: column;
             align-items: flex-end;
             justify-content: center;
-            min-width: 200px;
+            min-width: 220px;
         }
 
         .signature-title {
@@ -136,19 +136,25 @@ bio_html = """<!DOCTYPE html>
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
 
-        .signature-img {
-            font-family: 'Reenie Beanie', cursive;
-            font-size: 4.5rem;
-            color: var(--text-main);
-            transform: rotate(-5deg);
-            user-select: none;
-            line-height: 1;
+        .signature-img-container {
+            max-width: 260px;
+            max-height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* SEZIONE INFORMAZIONI MIA BIO */
+        .signature-img-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: brightness(1.2);
+        }
+
+        /* SEZIONE INFORMAZIONI */
         .info-section {
             padding: 40px;
         }
@@ -157,7 +163,7 @@ bio_html = """<!DOCTYPE html>
             font-family: 'Cinzel', serif;
             font-size: 1.4rem;
             color: #ffffff;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -174,10 +180,11 @@ bio_html = """<!DOCTYPE html>
 
         p.bio-text {
             color: var(--text-main);
-            margin-bottom: 24px;
+            margin-bottom: 28px;
             font-size: 1.05rem;
         }
 
+        /* GRIGLIA INFORMAZIONI */
         .info-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -185,7 +192,7 @@ bio_html = """<!DOCTYPE html>
             margin-top: 24px;
         }
 
-        @media (min-width: 600px) {
+        @media (min-width: 650px) {
             .info-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -199,14 +206,12 @@ bio_html = """<!DOCTYPE html>
         }
 
         .info-card h3 {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--accent-gold);
-            margin-bottom: 8px;
-        }
-
-        .info-card p, .info-card ul {
-            font-size: 0.92rem;
-            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .info-card ul {
@@ -217,7 +222,9 @@ bio_html = """<!DOCTYPE html>
         .info-card ul li {
             position: relative;
             padding-left: 18px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            font-size: 0.92rem;
+            color: var(--text-muted);
         }
 
         .info-card ul li::before {
@@ -227,23 +234,107 @@ bio_html = """<!DOCTYPE html>
             color: var(--accent-gold);
         }
 
-        .quote-box {
-            background: linear-gradient(135deg, rgba(0,82,165,0.2) 0%, rgba(197,160,89,0.1) 100%);
-            border-left: 4px solid var(--accent-gold);
-            padding: 20px;
-            border-radius: 0 10px 10px 0;
-            margin: 30px 0;
-            font-style: italic;
-            color: #e2e8f0;
+        /* CITAZIONI DELLA STAMPA */
+        .press-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 16px;
         }
 
-        .quote-author {
-            margin-top: 10px;
-            font-style: normal;
-            font-weight: 600;
+        .press-card {
+            background: linear-gradient(135deg, rgba(0,82,165,0.15) 0%, rgba(197,160,89,0.08) 100%);
+            border-left: 4px solid var(--accent-gold);
+            padding: 18px 22px;
+            border-radius: 0 10px 10px 0;
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .press-quote {
+            font-style: italic;
+            color: #e2e8f0;
+            font-size: 0.98rem;
+            margin-bottom: 8px;
+        }
+
+        .press-meta {
             font-size: 0.85rem;
             color: var(--accent-gold);
-            text-align: right;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .press-source {
+            color: var(--text-muted);
+            font-style: normal;
+        }
+
+        .press-link {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 0.8rem;
+            background: rgba(197, 160, 89, 0.15);
+            padding: 2px 8px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .press-link:hover {
+            background: rgba(197, 160, 89, 0.3);
+        }
+
+        /* GALLERIA FOTOGRAFICA */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 4/3;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background: #1e293b;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-gold);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 17, 24, 0.85);
+            padding: 6px 10px;
+            font-size: 0.75rem;
+            color: var(--text-main);
+            text-align: center;
+            backdrop-filter: blur(4px);
         }
 
         footer {
@@ -270,6 +361,9 @@ bio_html = """<!DOCTYPE html>
             h1.name {
                 font-size: 1.8rem;
             }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -279,24 +373,28 @@ bio_html = """<!DOCTYPE html>
     <!-- INTESTAZIONE (Come da Schizzo) -->
     <header>
         <h1 class="name">Bruno Rachiele</h1>
-        <div class="subtitle">Attivista Politico • Studente di Giurisprudenza</div>
+        <div class="subtitle">Attivista Politico • Studente di Giurisprudenza • Dirigente Sportivo</div>
     </header>
 
     <!-- FOTO & FIRMA (Sezione Superiore dello Schizzo) -->
     <section class="hero-section">
         <div class="photo-box">
-            <!-- Sostituisci il link qui sotto con il nome del tuo file immagine (es. foto_bruno.jpg) -->
             <img src="foto_bruno.jpg" alt="Bruno Rachiele" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <div style="display:none; font-size: 0.85rem; padding: 10px;">
-                📷 <br><strong>[La tua Foto Mia]</strong><br>
-                Inserisci <code>foto_bruno.jpg</code> nella cartella
+                📷 <br><strong>[Foto Profilo]</strong><br>
+                Inserisci <code>foto_bruno.jpg</code>
             </div>
         </div>
 
         <div class="signature-box">
             <div class="signature-title">Firma Ufficiale</div>
-            <!-- Se hai la foto/SVG della tua firma originale inserisci la tag <img>, altrimenti questo testo stilizzato rende esattamente lo stile dello schizzo -->
-            <div class="signature-img">Bruno Rachiele</div>
+            <div class="signature-img-container">
+                <!-- Carica il tuo file della firma salvandolo come firma.png nella stessa cartella del file index.html -->
+                <img src="firma.png" alt="Firma Bruno Rachiele" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display:none; color: var(--accent-gold); font-family: 'Cinzel', serif; font-size: 1.2rem; border: 1px dashed var(--border-color); padding: 12px 20px; border-radius: 6px;">
+                    ✍️ Inserisci <code>firma.png</code>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -304,14 +402,8 @@ bio_html = """<!DOCTYPE html>
     <section class="info-section">
         <div class="section-title">Profilo & Biografia</div>
         <p class="bio-text">
-            Studente della Facoltà di Giurisprudenza presso l'<strong>Università Magna Græcia di Catanzaro</strong> ed ex rappresentante degli studenti al Consiglio degli Studenti. Fin da giovanissimo impegnato attivamente nel panorama sociale, politico e studentesco, promuovendo i valori della partecipazione, della trasparenza istituzionale e della crescita culturale e civile dei giovani.
+            Studente della Facoltà di Giurisprudenza presso l'<strong>Università Magna Græcia di Catanzaro</strong> ed ex rappresentante degli studenti al Consiglio degli Studenti. Attivo fin da giovanissimo nel panorama sociale, politico, studentesco e dirigenziale sportivo, promuovendo il merito, la trasparenza e lo sviluppo culturale, civile e sportivo del territorio calabrese.
         </p>
-
-        <!-- CITAZIONE / INTERVENTO STAMPA -->
-        <div class="quote-box">
-            "Appartengo a una generazione che ha perso fiducia in molte istituzioni. Ma se c'è un'istituzione che deve restare credibile, è la Giustizia. Non si tratta di essere contro qualcuno, ma di garantire equilibrio, responsabilità e trasparenza per far sì che un giovane non perda fiducia nello Stato."
-            <div class="quote-author">— Bruno Rachiele (Intervento sulla Riforma della Giustizia)</div>
-        </div>
 
         <!-- GRIGLIA INFORMAZIONI DETTAGLIATE -->
         <div class="info-grid">
@@ -325,28 +417,96 @@ bio_html = """<!DOCTYPE html>
             </div>
 
             <div class="info-card">
+                <h3>⚽ Dirigenza Sportiva & Sociale</h3>
+                <ul>
+                    <li>Dirigente dell'<strong>A.S.D. Pizzo Calcio</strong>, impegnato nella gestione societaria e nella promozione dello sport locale.</li>
+                    <li>Sostenitore dello sport come strumento educativo, di inclusione sociale e riscatto per i giovani calabresi.</li>
+                    <li>Promotore di attività socioculturali ed eventi sul territorio.</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
                 <h3>🎓 Rappresentanza Studentesca</h3>
                 <ul>
                     <li>Ex rappresentante eletto nel <strong>Consiglio degli Studenti</strong> dell'Università Magna Græcia di Catanzaro.</li>
-                    <li>Vicepresidente e dirigente in <strong>Azione Studentesca</strong>.</li>
-                    <li>Impegno costante per la tutela dei diritti degli studenti universitari e delle scuole superiori.</li>
+                    <li>Dirigente e già Vicepresidente in <strong>Azione Studentesca</strong>.</li>
+                    <li>Tutelatore attivo dei diritti degli studenti universitari e del mondo della scuola.</li>
                 </ul>
             </div>
 
             <div class="info-card">
                 <h3>⚖️ Percorso Accademico</h3>
                 <ul>
-                    <li>Corso di Laurea Magistrale in <strong>Giurisprudenza</strong>.</li>
-                    <li>Focus e interesse scientifico rivolto al Diritto Costituzionale, alla Giustizia e al Diritto Pubblico.</li>
+                    <li>Corso di Laurea Magistrale in <strong>Giurisprudenza</strong> presso l'UMG di Catanzaro.</li>
+                    <li>Focus di studio rivolto al Diritto Costituzionale, Amministrativo e alla Riforma della Giustizia.</li>
                 </ul>
             </div>
+        </div>
 
-            <div class="info-card">
-                <h3>📌 Curiosità & Valori</h3>
-                <ul>
-                    <li>Fortemente legato alla storia, alle tradizioni e al rilancio culturale della Calabria.</li>
-                    <li>Sostenitore del merito, della meritocrazia negli studi e del servizio disinteressato per la comunità.</li>
-                </ul>
+        <!-- SEZIONE CITAZIONI E STAMPA -->
+        <div style="margin-top: 40px;">
+            <div class="section-title">Citazioni & Rassegna Stampa</div>
+            <div class="press-container">
+                <div class="press-card">
+                    <div class="press-quote">
+                        "Appartengo a una generazione che ha perso fiducia in molte istituzioni. Ma se c'è un'istituzione che deve restare credibile, è la Giustizia. Non si tratta di essere contro qualcuno, ma di garantire equilibrio, responsabilità e trasparenza per far sì che un giovane non perda fiducia nello Stato."
+                    </div>
+                    <div class="press-meta">
+                        <span>— Bruno Rachiele <span class="press-source">| Intervento sulla Riforma della Giustizia</span></span>
+                        <a href="#" class="press-link">Leggi articolo</a>
+                    </div>
+                </div>
+
+                <div class="press-card">
+                    <div class="press-quote">
+                        "Lo sport e l'università rappresentano i due grandi pilastri per il riscatto sociale della nostra terra. Investire sui giovani significa dare loro gli strumenti per restare e lottare in Calabria."
+                    </div>
+                    <div class="press-meta">
+                        <span>— Bruno Rachiele <span class="press-source">| Dichiarazione alla Stampa Locale</span></span>
+                        <a href="#" class="press-link">Leggi articolo</a>
+                    </div>
+                </div>
+
+                <div class="press-card">
+                    <div class="press-quote">
+                        "La rappresentanza studentesca non è un titolo da esibire, ma una responsabilità quotidiana al servizio della comunità accademica e del diritto allo studio."
+                    </div>
+                    <div class="press-meta">
+                        <span>— Bruno Rachiele <span class="press-source">| Nota sul Consiglio degli Studenti UMG</span></span>
+                        <a href="#" class="press-link">Leggi articolo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GALLERIA FOTOGRAFICA -->
+        <div style="margin-top: 40px;">
+            <div class="section-title">Galleria Fotografica</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="foto1.jpg" alt="Foto 1 - Attività Politica" onerror="this.src='https://via.placeholder.com/400x300/1e293b/94a3b8?text=Foto+1+(foto1.jpg)';">
+                    <div class="gallery-caption">Iniziative Politiche</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto2.jpg" alt="Foto 2 - Pizzo Calcio" onerror="this.src='https://via.placeholder.com/400x300/1e293b/94a3b8?text=Foto+2+(foto2.jpg)';">
+                    <div class="gallery-caption">A.S.D. Pizzo Calcio</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto3.jpg" alt="Foto 3 - Università UMG" onerror="this.src='https://via.placeholder.com/400x300/1e293b/94a3b8?text=Foto+3+(foto3.jpg)';">
+                    <div class="gallery-caption">Rappresentanza UMG</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto4.jpg" alt="Foto 4 - Congressi e Eventi" onerror="this.src='https://via.placeholder.com/400x300/1e293b/94a3b8?text=Foto+4+(foto4.jpg)';">
+                    <div class="gallery-caption">Congressi & Incontri</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto5.jpg" alt="Foto 5 - Territorio e Sociale" onerror="this.src='https://via.placeholder.com/400x300/1e293b/94a3b8?text=Foto+5+(foto5.jpg)';">
+                    <div class="gallery-caption">Attività sul Territorio</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto6.jpg" alt="Foto 6 - Interventi Pubblici" onerror="this.src='https://via.placeholder.com/400x300/1e293b/94a3b8?text=Foto+6+(foto6.jpg)';">
+                    <div class="gallery-caption">Interventi Pubblici</div>
+                </div>
             </div>
         </div>
     </section>
@@ -359,9 +519,3 @@ bio_html = """<!DOCTYPE html>
 
 </body>
 </html>
-"""
-
-with open('index.html', 'w', encoding='utf-8') as f:
-    f.write(bio_html)
-
-print("index.html per la biografia creato con successo!")
