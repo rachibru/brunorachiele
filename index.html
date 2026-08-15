@@ -1,16 +1,70 @@
-<!DOCTYPE html>
+bio_html_v3 = """<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- TAG SEO FONDAMENTALI PER GOOGLE -->
-    <title>Bruno Rachiele | Biografia, Attivismo Politico, Sport e Rappresentanza Studentesca</title>
-    <meta name="description" content="Sito ufficiale di Bruno Rachiele, attivista politico di Fratelli d'Italia, studente di Giurisprudenza presso UMG Catanzaro, dirigente sportivo dell'A.S.D. Pizzo Calcio ed ex rappresentante degli studenti.">
-    <meta name="keywords" content="Bruno Rachiele, Fratelli d'Italia, Catanzaro, Pizzo Calcio, Giurisprudenza, Rappresentanza Studentesca, Azione Studentesca, Università Magna Graecia">
+    <title>Bruno Rachiele | Sito Ufficiale, Biografia, Attivismo Politico, Libri e Sport</title>
+    <meta name="description" content="Sito ufficiale di Bruno Rachiele (nato il 19 ottobre 2004 a Soveria Mannelli), autore, attivista politico di Fratelli d'Italia, studente di Giurisprudenza UMG e dirigente dell'A.S.D. Pizzo Calcio.">
+    <meta name="keywords" content="Bruno Rachiele, Rinascita dalle ombre, Haiku La poesia dell'infinito, Fratelli d'Italia, Catanzaro, Pizzo Calcio, Giurisprudenza, Rappresentanza Studentesca, Soveria Mannelli">
     <meta name="author" content="Bruno Rachiele">
     <meta name="robots" content="index, follow">
     
+    <!-- DATI STRUTTURATI SCHEMA.ORG (JSON-LD) PER GOOGLE KNOWLEDGE GRAPH -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Bruno Rachiele",
+      "birthDate": "2004-10-19",
+      "birthPlace": {
+        "@type": "Place",
+        "name": "Soveria Mannelli"
+      },
+      "jobTitle": ["Attivista Politico", "Autore", "Dirigente Sportivo"],
+      "description": "Bruno Rachiele (Soveria Mannelli, 19 ottobre 2004) è un attivista politico italiano di Fratelli d'Italia, autore di libri, studente di Giurisprudenza presso l'Università Magna Græcia di Catanzaro e dirigente dell'A.S.D. Pizzo Calcio.",
+      "url": "https://rachibru.github.io/brunorachiele/",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q136450602",
+        "https://share.google/8lUOakwkyXK0tAzp6",
+        "https://www.facebook.com/rachielebruno/",
+        "https://www.instagram.com/rachielebruno_ufficiale/",
+        "https://twitter.com/RachieleBruno"
+      ],
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Istituto Tecnico Economico Valentino De Fazio"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Università degli Studi Magna Græcia di Catanzaro"
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "PoliticalParty",
+          "name": "Fratelli d'Italia"
+        },
+        {
+          "@type": "SportsTeam",
+          "name": "A.S.D. Pizzo Calcio"
+        }
+      ],
+      "author": [
+        {
+          "@type": "Book",
+          "name": "Rinascita dalle ombre. Superare le avversità e ispirare il cambiamento"
+        },
+        {
+          "@type": "Book",
+          "name": "Haiku – La poesia dell’infinito"
+        }
+      ]
+    }
+    </script>
+
     <!-- Font Eleganti -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,12 +132,40 @@
         }
 
         .subtitle {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--accent-gold);
             font-weight: 600;
             margin-top: 6px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
+        }
+
+        /* SOCIAL BAR INTEGRATO */
+        .social-bar {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .social-link:hover {
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+            background: rgba(197, 160, 89, 0.1);
         }
 
         /* SEZIONE FOTO E FIRMA */
@@ -234,6 +316,20 @@
             color: var(--accent-gold);
         }
 
+        /* SECONDA GRIGLIA PER LIBRI E ISTRUZIONE */
+        .secondary-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 650px) {
+            .secondary-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
         /* CITAZIONI DELLA STAMPA */
         .press-container {
             display: flex;
@@ -370,13 +466,22 @@
 <body>
 
 <div class="container">
-    <!-- INTESTAZIONE (Come da Schizzo) -->
+    <!-- INTESTAZIONE -->
     <header>
         <h1 class="name">Bruno Rachiele</h1>
-        <div class="subtitle">Attivista Politico • Studente di Giurisprudenza • Dirigente Sportivo</div>
+        <div class="subtitle">Attivista Politico • Autore • Studente di Giurisprudenza • Dirigente Sportivo</div>
+        
+        <!-- PROFILI SOCIAL E SCHEDA GOOGLE KNOWLEDGE GRAPH -->
+        <div class="social-bar">
+            <a href="https://www.wikidata.org/wiki/Q136450602" target="_blank" class="social-link">🌐 Wikidata</a>
+            <a href="https://share.google/8lUOakwkyXK0tAzp6" target="_blank" class="social-link">🔍 Scheda Google</a>
+            <a href="https://www.facebook.com/rachielebruno/" target="_blank" class="social-link">📘 Facebook</a>
+            <a href="https://www.instagram.com/rachielebruno_ufficiale/" target="_blank" class="social-link">📸 Instagram</a>
+            <a href="https://twitter.com/RachieleBruno" target="_blank" class="social-link">🐦 X (Twitter)</a>
+        </div>
     </header>
 
-    <!-- FOTO & FIRMA (Sezione Superiore dello Schizzo) -->
+    <!-- FOTO & FIRMA -->
     <section class="hero-section">
         <div class="photo-box">
             <img src="foto_bruno.jpg" alt="Bruno Rachiele" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -389,20 +494,19 @@
         <div class="signature-box">
             <div class="signature-title">Firma Ufficiale</div>
             <div class="signature-img-container">
-                <!-- Carica il tuo file della firma salvandolo come firma.png nella stessa cartella del file index.html -->
                 <img src="firma.png" alt="Firma Bruno Rachiele" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <div style="display:none; color: var(--accent-gold); font-family: 'Cinzel', serif; font-size: 1.2rem; border: 1px dashed var(--border-color); padding: 12px 20px; border-radius: 6px;">
-                    ✍️ Inserisci <code>firma.png</code>
+                <div style="display:none; color: var(--accent-gold); font-family: 'Cinzel', serif; font-size: 1.1rem; border: 1px dashed var(--border-color); padding: 12px 20px; border-radius: 6px;">
+                    ✍️ Carica <code>firma.png</code>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- INFORMAZIONI MIE (Sezione Inferiore dello Schizzo) -->
+    <!-- INFORMAZIONI MIE -->
     <section class="info-section">
         <div class="section-title">Profilo & Biografia</div>
         <p class="bio-text">
-            Studente della Facoltà di Giurisprudenza presso l'<strong>Università Magna Græcia di Catanzaro</strong> ed ex rappresentante degli studenti al Consiglio degli Studenti. Attivo fin da giovanissimo nel panorama sociale, politico, studentesco e dirigenziale sportivo, promuovendo il merito, la trasparenza e lo sviluppo culturale, civile e sportivo del territorio calabrese.
+            Nato a <strong>Soveria Mannelli</strong> il 19 ottobre 2004, <strong>Bruno Rachiele</strong> è un autore, attivista politico e dirigente sportivo calabrese. Studente della Facoltà di Giurisprudenza presso l'<strong>Università Magna Græcia di Catanzaro</strong> ed ex rappresentante degli studenti al Consiglio degli Studenti, è fortemente impegnato nel tessuto sociale, culturale, istituzionale e sportivo del territorio.
         </p>
 
         <!-- GRIGLIA INFORMAZIONI DETTAGLIATE -->
@@ -443,13 +547,32 @@
             </div>
         </div>
 
+        <!-- NUOVA SEZIONE PER LIBRI E ISTRUZIONE -->
+        <div class="secondary-grid">
+            <div class="info-card">
+                <h3>📚 Libri & Pubblicazioni</h3>
+                <ul>
+                    <li><strong>Rinascita dalle ombre. Superare le avversità e ispirare il cambiamento</strong></li>
+                    <li><strong>Haiku – La poesia dell’infinito</strong></li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>🏫 Istruzione & Formazione</h3>
+                <ul>
+                    <li>Diploma presso l'<strong>Istituto Tecnico Economico “Valentino De Fazio”</strong> (2018–2023).</li>
+                    <li>Nato a <strong>Soveria Mannelli</strong> (CZ) il 19 ottobre 2004.</li>
+                </ul>
+            </div>
+        </div>
+
         <!-- SEZIONE CITAZIONI E STAMPA -->
         <div style="margin-top: 40px;">
             <div class="section-title">Citazioni & Rassegna Stampa</div>
             <div class="press-container">
                 <div class="press-card">
                     <div class="press-quote">
-                        "Appartengo a una generazione che ha perso fiducia in molte istituzioni. Ma se c'è un'istituzione che deve restare credibile, è la Giustizia. Non si tratta di essere contro qualcuno, ma di garantire equilibrio, responsabilità e trasparenza per far sì che un giovane non perda fiducia nello Stato."
+                        "Appartengo a una generazione che ha perso fiducia in molte istituzioni. Ma se c'è un'istituzione che deve restare credibile, è la Giustizia. Non si tratta di essere contro qualcuno, ma di garantire equilibrio, responsabilità e trasparenza."
                     </div>
                     <div class="press-meta">
                         <span>— Bruno Rachiele <span class="press-source">| Intervento sulla Riforma della Giustizia</span></span>
@@ -519,3 +642,9 @@
 
 </body>
 </html>
+"""
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(bio_html_v3)
+
+print("Versione 3 con Schema.org e Knowledge Graph integrati!")
