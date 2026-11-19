@@ -15,7 +15,7 @@
     <!-- OPEN GRAPH & SOCIAL CARD -->
     <meta property="og:type" content="profile">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:site_name" content="Bruno Rachiele - Biografia Ufficiale">
+    <meta property="og:site_name" content="BrunoRachiele.it — Biografia Ufficiale">
     <meta property="og:title" content="Bruno Rachiele | Biografia Ufficiale, Editore e Attivista Politico">
     <meta property="og:description" content="Fondatore ed editore di brunorachiele.it, autore, attivista politico di Fratelli d'Italia, studente di Giurisprudenza UMG e dirigente sportivo.">
     <meta property="og:url" content="https://bio.brunorachiele.it/">
@@ -109,380 +109,369 @@
     }
     </script>
 
-    <!-- Font Eleganti -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <style>
-        :root {
-            --bg-color: #0d131a;
-            --card-bg: #151d28;
-            --accent-blue: #0052a5;
-            --accent-gold: #c5a059;
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --border-color: #263346;
-        }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: #1f2328;
+        line-height: 1.7;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+      }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+      /* BARRA ISTITUZIONALE SUPERIORE COORDINATA CON BRUNORACHIELE.IT */
+      .br-topbar {
+        background: #f6f8fa;
+        border-bottom: 1px solid #d0d7de;
+        padding: 12px 20px;
+      }
+      .br-topbar-inner {
+        max-width: 820px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+      }
+      .br-brand {
+        font-weight: 800;
+        font-size: 16px;
+        color: #0f4c81;
+        text-decoration: none;
+        letter-spacing: -0.01em;
+      }
+      .br-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 13.5px;
+      }
+      .br-nav a {
+        color: #57606a;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .br-nav a:hover {
+        color: #0f4c81;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.7;
-            padding: 20px;
-        }
+      /* CONTENITORE PRINCIPALE (IDENTICO A .br-about-page) */
+      .br-bio-page {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 28px 20px 40px;
+      }
 
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            overflow: hidden;
-        }
+      /* HERO PROFILO */
+      .br-bio-hero {
+        background: #f6f8fa;
+        border-left: 4px solid #0f4c81;
+        border-radius: 6px;
+        padding: 26px 28px;
+        margin-bottom: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+      .br-bio-hero-info {
+        flex: 1;
+        min-width: 260px;
+      }
+      .br-bio-badge {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #0f4c81;
+        background: #e6f0fa;
+        padding: 4px 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      .br-bio-title {
+        font-size: 28px;
+        font-weight: 800;
+        color: #1f2328;
+        margin: 0 0 6px;
+        line-height: 1.2;
+      }
+      .br-bio-subtitle {
+        font-size: 14.5px;
+        font-weight: 600;
+        color: #0f4c81;
+        margin: 0 0 14px;
+      }
+      .br-bio-lead {
+        margin: 0 0 16px;
+        font-size: 15.5px;
+        color: #24292f;
+      }
+      .br-bio-photo-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .br-bio-photo {
+        width: 170px;
+        height: 170px;
+        border-radius: 10px;
+        border: 2px solid #d0d7de;
+        background: #ffffff;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(15, 76, 129, 0.08);
+      }
+      .br-bio-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .br-bio-signature {
+        max-width: 150px;
+        max-height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .br-bio-signature img {
+        max-width: 100%;
+        max-height: 54px;
+        object-fit: contain;
+        filter: invert(1) contrast(1.4);
+      }
 
-        header {
-            background: linear-gradient(135deg, #0a1118 0%, #172436 100%);
-            padding: 36px 40px;
-            border-bottom: 2px solid var(--border-color);
-            position: relative;
-        }
+      /* CHIP SOCIAL E IDENTIFICATIVI */
+      .br-social-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .br-social-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #0f4c81 !important;
+        background: #ffffff;
+        border: 1px solid #d0d7de;
+        border-radius: 6px;
+        padding: 5px 11px;
+        text-decoration: none !important;
+        transition: all 0.15s ease;
+      }
+      .br-social-chip:hover {
+        background: #e6f0fa;
+        border-color: #0f4c81;
+      }
 
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 120px;
-            height: 2px;
-            background: var(--accent-gold);
-        }
+      /* SEZIONI */
+      .br-bio-section {
+        margin-bottom: 30px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .br-bio-section:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .br-bio-section h2 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0f4c81;
+        margin: 0 0 14px;
+        line-height: 1.3;
+      }
+      .br-bio-section p {
+        margin: 0 0 12px;
+      }
+      .br-bio-page a {
+        color: #0f4c81;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
 
-        h1.name {
-            font-family: 'Cinzel', serif;
-            font-size: 2.4rem;
-            letter-spacing: 1px;
-            color: #ffffff;
-            text-transform: uppercase;
-        }
+      /* GRIGLIA CARD INFORMAZIONI */
+      .br-bio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+        margin-top: 14px;
+      }
+      .br-bio-card {
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 18px 20px;
+      }
+      .br-bio-card h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #0f4c81;
+        margin: 0 0 10px;
+      }
+      .br-bio-card ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .br-bio-card ul li {
+        margin-bottom: 7px;
+        font-size: 14.5px;
+        color: #374151;
+        line-height: 1.55;
+      }
+      .br-bio-card ul li:last-child {
+        margin-bottom: 0;
+      }
 
-        .subtitle {
-            font-size: 0.95rem;
-            color: var(--accent-gold);
-            font-weight: 600;
-            margin-top: 6px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
+      /* CITAZIONI & RASSEGNA STAMPA */
+      .br-press-list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .br-press-item {
+        background: #f6f8fa;
+        border-left: 3px solid #0f4c81;
+        border-top: 1px solid #e5e7eb;
+        border-right: 1px solid #e5e7eb;
+        border-bottom: 1px solid #e5e7eb;
+        border-radius: 0 8px 8px 0;
+        padding: 16px 20px;
+      }
+      .br-press-quote {
+        font-style: italic;
+        color: #24292f;
+        font-size: 15px;
+        margin: 0 0 8px;
+      }
+      .br-press-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        font-size: 13.5px;
+        color: #57606a;
+      }
+      .br-press-link {
+        display: inline-block;
+        background: #e6f0fa;
+        color: #0f4c81 !important;
+        text-decoration: none !important;
+        font-weight: 600;
+        font-size: 12.5px;
+        padding: 3px 10px;
+        border-radius: 4px;
+      }
+      .br-press-link:hover {
+        background: #d0e3f7;
+      }
 
-        .social-bar {
-            display: flex;
-            gap: 10px;
-            margin-top: 18px;
-            flex-wrap: wrap;
-        }
+      /* GALLERIA FOTOGRAFICA */
+      .br-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 14px;
+        margin-top: 14px;
+      }
+      .br-gallery-item {
+        border: 1px solid #d0d7de;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #f6f8fa;
+      }
+      .br-gallery-item img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        display: block;
+      }
+      .br-gallery-caption {
+        padding: 8px 12px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #374151;
+        text-align: center;
+        background: #ffffff;
+        border-top: 1px solid #e5e7eb;
+      }
 
-        .social-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.85rem;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 5px 13px;
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
+      /* BANNER TRASPARENZA & FOOTER */
+      .br-trust-box {
+        background: #f0f7ff;
+        border: 1px solid #bfd9f2;
+        border-radius: 8px;
+        padding: 18px 22px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+      .br-btn {
+        display: inline-block;
+        background: #0f4c81;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 9px 16px;
+        border-radius: 6px;
+        white-space: nowrap;
+      }
+      .br-btn:hover {
+        background: #09355c;
+      }
+      .br-footer {
+        background: #f6f8fa;
+        border-top: 1px solid #d0d7de;
+        padding: 20px;
+        text-align: center;
+        font-size: 13.5px;
+        color: #57606a;
+      }
+      .br-footer a {
+        color: #0f4c81;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .br-footer a:hover {
+        text-decoration: underline;
+      }
 
-        .social-link:hover {
-            color: var(--accent-gold);
-            border-color: var(--accent-gold);
-            background: rgba(197, 160, 89, 0.1);
+      @media (max-width: 600px) {
+        .br-bio-hero {
+          padding: 20px;
+          flex-direction: column-reverse;
+          align-items: flex-start;
         }
-
-        .hero-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.015);
-            border-bottom: 1px solid var(--border-color);
-            gap: 24px;
-            flex-wrap: wrap;
+        .br-bio-photo-wrap {
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
         }
-
-        .photo-box {
-            width: 220px;
-            height: 220px;
-            border-radius: 12px;
-            border: 2px solid var(--accent-gold);
-            background: #1a2636;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            text-align: center;
-            padding: 6px;
-            position: relative;
-            overflow: hidden;
+        .br-bio-photo {
+          width: 120px;
+          height: 120px;
         }
-
-        .photo-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
+        .br-bio-title {
+          font-size: 24px;
         }
-
-        .signature-box {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: center;
-            min-width: 220px;
-        }
-
-        .signature-img-container {
-            max-width: 260px;
-            max-height: 110px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .signature-img-container img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            filter: brightness(1.2);
-        }
-
-        .info-section {
-            padding: 40px;
-        }
-
-        .section-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
-            color: #ffffff;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section-title::before {
-            content: '';
-            display: inline-block;
-            width: 4px;
-            height: 20px;
-            background: var(--accent-gold);
-            border-radius: 2px;
-        }
-
-        p.bio-text {
-            color: var(--text-main);
-            margin-bottom: 28px;
-            font-size: 1.05rem;
-        }
-
-        .bio-text a, .info-card a {
-            color: var(--accent-gold);
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
-        .info-grid, .secondary-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin-top: 22px;
-        }
-
-        @media (min-width: 650px) {
-            .info-grid, .secondary-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .info-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 20px;
-        }
-
-        .info-card h3 {
-            font-size: 1.05rem;
-            color: var(--accent-gold);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .info-card ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .info-card ul li {
-            position: relative;
-            padding-left: 18px;
-            margin-bottom: 8px;
-            font-size: 0.92rem;
-            color: var(--text-muted);
-        }
-
-        .info-card ul li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--accent-gold);
-        }
-
-        .press-container {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 16px;
-        }
-
-        .press-card {
-            background: linear-gradient(135deg, rgba(0,82,165,0.15) 0%, rgba(197,160,89,0.08) 100%);
-            border-left: 4px solid var(--accent-gold);
-            padding: 18px 22px;
-            border-radius: 0 10px 10px 0;
-            border-top: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .press-quote {
-            font-style: italic;
-            color: #e2e8f0;
-            font-size: 0.98rem;
-            margin-bottom: 8px;
-        }
-
-        .press-meta {
-            font-size: 0.85rem;
-            color: var(--accent-gold);
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .press-source {
-            color: var(--text-muted);
-            font-style: normal;
-        }
-
-        .press-link {
-            color: var(--accent-gold);
-            text-decoration: none;
-            font-size: 0.8rem;
-            background: rgba(197, 160, 89, 0.15);
-            padding: 3px 10px;
-            border-radius: 4px;
-            transition: background 0.2s;
-        }
-
-        .press-link:hover {
-            background: rgba(197, 160, 89, 0.3);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-            margin-top: 20px;
-        }
-
-        @media (min-width: 600px) {
-            .gallery-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .gallery-item {
-            position: relative;
-            aspect-ratio: 4/3;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            background: #1e293b;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-gold);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 17, 24, 0.88);
-            padding: 6px 10px;
-            font-size: 0.75rem;
-            color: var(--text-main);
-            text-align: center;
-            backdrop-filter: blur(4px);
-        }
-
-        footer {
-            text-align: center;
-            padding: 24px;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            background: #0a1118;
-        }
-
-        footer a {
-            color: var(--accent-gold);
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            header, .hero-section, .info-section {
-                padding: 24px;
-            }
-            .hero-section {
-                flex-direction: column;
-                align-items: center;
-            }
-            .signature-box {
-                align-items: center;
-            }
-            h1.name {
-                font-size: 1.8rem;
-            }
-        }
+      }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -496,182 +485,213 @@
 </head>
 <body>
 
-<div class="container">
-    <!-- INTESTAZIONE -->
-    <header>
-        <h1 class="name">Bruno Rachiele</h1>
-        <div class="subtitle">Editore &bull; Attivista Politico &bull; Studente di Giurisprudenza</div>
+  <!-- BARRA DI NAVIGAZIONE COORDINATA CON IL PORTALE -->
+  <div class="br-topbar">
+    <div class="br-topbar-inner">
+      <a class="br-brand" href="https://www.brunorachiele.it/">BrunoRachiele.it</a>
+      <nav class="br-nav" aria-label="Navigazione ecosistema">
+        <a href="https://www.brunorachiele.it/">Portale News</a>
+        <a href="https://www.brunorachiele.it/p/chi-siamo.html">Chi siamo</a>
+        <a href="https://www.brunorachiele.it/p/linea-editoriale.html">Linea Editoriale</a>
+        <a href="https://trust.brunorachiele.it/">Registro Trust</a>
+      </nav>
+    </div>
+  </div>
 
-        <!-- PROFILI SOCIAL E SCHEDA GOOGLE KNOWLEDGE GRAPH -->
-        <nav class="social-bar" aria-label="Collegamenti ufficiali">
-            <a href="https://www.brunorachiele.it/" target="_blank" rel="noopener" class="social-link">🌐 brunorachiele.it</a>
-            <a href="https://trust.brunorachiele.it/" target="_blank" rel="noopener" class="social-link">🔐 Registro Trust</a>
-            <a href="https://www.facebook.com/rachielebruno/" target="_blank" rel="noopener me" class="social-link">📘 Facebook</a>
-            <a href="https://www.instagram.com/rachielebruno_ufficiale/" target="_blank" rel="noopener me" class="social-link">📸 Instagram</a>
-            <a href="https://twitter.com/RachieleBruno" target="_blank" rel="noopener me" class="social-link">🐦 X (Twitter)</a>
-            <a href="https://share.google/8lUOakwkyXK0tAzp6" target="_blank" rel="noopener" class="social-link">🔍 Scheda Google</a>
-        </nav>
-    </header>
+  <main class="br-bio-page">
 
-    <!-- FOTO & FIRMA -->
-    <section class="hero-section">
-        <div class="photo-box">
-            <img src="foto_bruno.jpg" alt="Ritratto ufficiale di Bruno Rachiele" width="220" height="220" onerror="this.style.display='none';">
+    <!-- HERO BIOGRAFICO -->
+    <div class="br-bio-hero">
+      <div class="br-bio-hero-info">
+        <span class="br-bio-badge">Profilo Biografico &bull; Scheda Autore</span>
+        <h1 class="br-bio-title">Bruno Rachiele</h1>
+        <div class="br-bio-subtitle">Editore &bull; Attivista Politico &bull; Studente di Giurisprudenza &bull; Dirigente Sportivo</div>
+        <p class="br-bio-lead">
+          Nato a <strong>Soveria Mannelli</strong> il 19 ottobre 2004, &egrave; fondatore ed editore del portale di informazione e data-journalism <a href="https://www.brunorachiele.it/">brunorachiele.it</a>, autore, attivista politico e dirigente sportivo impegnato nel tessuto culturale, istituzionale e sociale della Calabria.
+        </p>
+        <div class="br-social-bar">
+          <a href="https://www.brunorachiele.it/" target="_blank" rel="noopener" class="br-social-chip">Portale Ufficiale</a>
+          <a href="https://www.wikidata.org/wiki/Q136450602" target="_blank" rel="noopener me" class="br-social-chip">Wikidata (Q136450602)</a>
+          <a href="https://share.google/8lUOakwkyXK0tAzp6" target="_blank" rel="noopener" class="br-social-chip">Scheda Google</a>
+          <a href="https://www.facebook.com/rachielebruno/" target="_blank" rel="noopener me" class="br-social-chip">Facebook</a>
+          <a href="https://www.instagram.com/rachielebruno_ufficiale/" target="_blank" rel="noopener me" class="br-social-chip">Instagram</a>
+          <a href="https://twitter.com/RachieleBruno" target="_blank" rel="noopener me" class="br-social-chip">X (Twitter)</a>
+        </div>
+      </div>
+
+      <div class="br-bio-photo-wrap">
+        <div class="br-bio-photo">
+          <img src="foto_bruno.jpg" alt="Ritratto ufficiale di Bruno Rachiele" width="170" height="170" onerror="this.parentElement.style.display='none';">
+        </div>
+        <div class="br-bio-signature">
+          <img src="firma.png" alt="Firma autografa di Bruno Rachiele" width="150" height="54" onerror="this.parentElement.style.display='none';">
+        </div>
+      </div>
+    </div>
+
+    <!-- ATTIVITÀ E PERCORSO -->
+    <section class="br-bio-section">
+      <h2>Attivit&agrave; Editoriale, Politica e Accademica</h2>
+      <div class="br-bio-grid">
+
+        <div class="br-bio-card">
+          <h3>Attivit&agrave; Editoriale &amp; Data-Journalism</h3>
+          <ul>
+            <li>Fondatore, editore e responsabile unico dei contenuti di <a href="https://www.brunorachiele.it/"><strong>brunorachiele.it</strong></a>, dedicato a politica italiana, Supermedia settimanali dei sondaggi elettorali e rassegna stampa.</li>
+            <li>Ideatore dell'infrastruttura di certificazione crittografica <a href="https://trust.brunorachiele.it/" target="_blank" rel="noopener"><strong>trust.brunorachiele.it</strong></a>, conforme agli standard internazionali della <em>Journalism Trust Initiative (JTI)</em>.</li>
+            <li>Caporedattore di <strong>Ermes Giornalino UMG</strong> con pubblicazione settimanale di editoriali e approfondimenti di attualit&agrave;.</li>
+          </ul>
         </div>
 
-        <div class="signature-box">
-            <div class="signature-img-container">
-                <img src="firma.png" alt="Firma autografa di Bruno Rachiele" width="260" height="110" onerror="this.style.display='none';">
-            </div>
+        <div class="br-bio-card">
+          <h3>Attivismo Politico &amp; Sport</h3>
+          <ul>
+            <li>Iscritto e membro attivo di <strong>Fratelli d'Italia</strong> (senza incarichi elettivi o istituzionali), con partecipazione a congressi locali, dibattiti e iniziative di coordinamento territoriale.</li>
+            <li>Promotore di interventi pubblici su riforme istituzionali, giustizia e diritto allo studio.</li>
+            <li>Dirigente dell'<strong>A.S.D. Pizzo Calcio</strong>, impegnato nella gestione societaria e nella promozione dello sport locale.</li>
+          </ul>
         </div>
+
+        <div class="br-bio-card">
+          <h3>Rappresentanza Studentesca</h3>
+          <ul>
+            <li>Ex rappresentante eletto alla <strong>Consulta Provinciale degli Studenti</strong> di Catanzaro (2021&ndash;2023).</li>
+            <li>Capogruppo delle commissioni permanenti sul <strong>Diritto allo Studio e Trasporto Pubblico Locale (2021&ndash;2023)</strong> ed <strong>Edilizia Scolastica (2022&ndash;2023)</strong>.</li>
+            <li>Delegato in rappresentanza della Consulta Calabrese agli eventi sul territorio nazionale.</li>
+            <li>Gi&agrave; militante e tesserato di <strong>Azione Studentesca</strong> fino al 2023.</li>
+          </ul>
+        </div>
+
+        <div class="br-bio-card">
+          <h3>Percorso Accademico</h3>
+          <ul>
+            <li>Studente del Corso di Laurea Magistrale a ciclo unico in <strong>Giurisprudenza</strong> presso l'<strong>Universit&agrave; degli Studi Magna Gr&aelig;cia di Catanzaro</strong>.</li>
+            <li>Focus di studio rivolto al Diritto della Navigazione Aerea, Diritto Internazionale e Diritto Pubblico Comparato.</li>
+          </ul>
+        </div>
+
+      </div>
     </section>
 
-    <!-- INFORMAZIONI BIOGRAFICHE -->
-    <main class="info-section">
-        <h2 class="section-title">Profilo &amp; Biografia</h2>
-        <p class="bio-text">
-            Nato a <strong>Soveria Mannelli</strong> il 19 ottobre 2004, <strong>Bruno Rachiele</strong> è fondatore ed editore del portale di informazione e data-journalism <a href="https://www.brunorachiele.it/" target="_blank" rel="noopener">brunorachiele.it</a>, autore, attivista politico e dirigente sportivo. Studente della Facoltà di Giurisprudenza presso l'<strong>Università Magna Græcia di Catanzaro</strong> ed ex rappresentante degli studenti alla Consulta Provinciale degli Studenti, è impegnato nel tessuto culturale, istituzionale e sportivo del territorio.
-        </p>
+    <!-- LIBRI E ISTRUZIONE -->
+    <section class="br-bio-section">
+      <h2>Pubblicazioni e Formazione</h2>
+      <div class="br-bio-grid">
+        <div class="br-bio-card">
+          <h3>Libri Pubblicati</h3>
+          <ul>
+            <li><strong>Rinascita dalle ombre. Superare le avversit&agrave; e ispirare il cambiamento</strong></li>
+            <li><strong>Haiku &ndash; La poesia dell&rsquo;infinito</strong></li>
+          </ul>
+        </div>
+        <div class="br-bio-card">
+          <h3>Istruzione Secondaria</h3>
+          <ul>
+            <li>Diploma conseguito presso l'<strong>Istituto Tecnico Economico &ldquo;Valentino De Fazio&rdquo;</strong> (2018&ndash;2023).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <!-- GRIGLIA INFORMAZIONI DETTAGLIATE -->
-        <div class="info-grid">
-            <div class="info-card">
-                <h3>📰 Attività Editoriale &amp; Giornalistica</h3>
-                <ul>
-                    <li>Fondatore, editore e responsabile editoriale di <a href="https://www.brunorachiele.it/" target="_blank" rel="noopener"><strong>brunorachiele.it</strong></a>, con pubblicazione settimanale delle Supermedie dei sondaggi politici, analisi elettorali e rassegne stampa.</li>
-                    <li>Ideatore dell'infrastruttura di tracciabilità crittografica <a href="https://trust.brunorachiele.it/" target="_blank" rel="noopener"><strong>trust.brunorachiele.it</strong></a>, allineata agli standard della <em>Journalism Trust Initiative (JTI)</em>.</li>
-                    <li>Caporedattore di <strong>Ermes Giornalino UMG</strong> con pubblicazione settimanale di editoriali e approfondimenti di attualità.</li>
-                </ul>
-            </div>
+    <!-- CITAZIONI & RASSEGNA STAMPA -->
+    <section class="br-bio-section">
+      <h2>Citazioni &amp; Rassegna Stampa</h2>
+      <div class="br-press-list">
 
-            <div class="info-card">
-                <h3>🏛️ Attivismo Politico &amp; Sport</h3>
-                <ul>
-                    <li>Membro attivo di <strong>Fratelli d'Italia</strong> (senza incarichi elettivi o istituzionali), con partecipazione a congressi locali, dibattiti e iniziative di coordinamento territoriale.</li>
-                    <li>Promotore di interventi pubblici su riforme istituzionali, giustizia e diritto allo studio.</li>
-                    <li>Dirigente dell'<strong>A.S.D. Pizzo Calcio</strong>, impegnato nella gestione societaria e nella promozione dello sport locale.</li>
-                </ul>
-            </div>
-
-            <div class="info-card">
-                <h3>🎓 Rappresentanza Studentesca</h3>
-                <ul>
-                    <li>Ex rappresentante eletto alla <strong>Consulta degli Studenti</strong> della Provincia di Catanzaro dal 2021 al 2023.</li>
-                    <li>Capogruppo delle commissioni permanenti sul <strong>Diritto allo Studio e Trasporto Pubblico Locale (2021–2023)</strong> ed <strong>Edilizia Scolastica (2022–2023)</strong>.</li>
-                    <li>Delegato in rappresentanza della Consulta Calabrese agli eventi nazionali.</li>
-                    <li>Già militante e tesserato di <strong>Azione Studentesca</strong> fino al 2023.</li>
-                </ul>
-            </div>
-
-            <div class="info-card">
-                <h3>⚖️ Percorso Accademico</h3>
-                <ul>
-                    <li>Corso di Laurea Magistrale a ciclo unico in <strong>Giurisprudenza</strong> presso l'Università degli Studi Magna Græcia di Catanzaro.</li>
-                    <li>Focus di studio rivolto al Diritto della Navigazione Aerea, Diritto Internazionale e Diritto Pubblico Comparato.</li>
-                </ul>
-            </div>
+        <div class="br-press-item">
+          <p class="br-press-quote">
+            &ldquo;Appartengo a una generazione che ha perso fiducia in molte istituzioni. Ma se c'&egrave; un'istituzione che deve restare credibile, &egrave; la Giustizia. Non si tratta di essere contro qualcuno, ma di garantire equilibrio, responsabilit&agrave; e trasparenza.&rdquo;
+          </p>
+          <div class="br-press-meta">
+            <span><strong>Bruno Rachiele</strong> &bull; Intervento sulla Riforma della Giustizia</span>
+            <a href="https://lanovitaonline.it/giustizia-la-voce-di-una-generazione-che-chiede-equilibrio-e-responsabilita/" target="_blank" rel="noopener" class="br-press-link">Leggi articolo &rarr;</a>
+          </div>
         </div>
 
-        <!-- LIBRI E ISTRUZIONE -->
-        <div class="secondary-grid">
-            <div class="info-card">
-                <h3>📚 Libri &amp; Pubblicazioni</h3>
-                <ul>
-                    <li><strong>Rinascita dalle ombre. Superare le avversità e ispirare il cambiamento</strong></li>
-                    <li><strong>Haiku – La poesia dell’infinito</strong></li>
-                </ul>
-            </div>
-
-            <div class="info-card">
-                <h3>🏫 Istruzione &amp; Formazione</h3>
-                <ul>
-                    <li>Diploma presso l'<strong>Istituto Tecnico Economico “Valentino De Fazio”</strong> (2018–2023).</li>
-                </ul>
-            </div>
+        <div class="br-press-item">
+          <p class="br-press-quote">
+            &ldquo;Presente in Aula anche il Rappresentante degli Studenti Bruno Rachiele che ha rivolto un saluto [...] ha sottolineato il dovere di ricordare chi ci ha preceduto e seguire le sue orme.&rdquo;
+          </p>
+          <div class="br-press-meta">
+            <span><strong>Bruno Rachiele</strong> &bull; Inaugurazione Sala Consiliare di Lamezia Terme</span>
+            <a href="https://www.lametino.it/ultimora/lamezia-l-aula-consiliare-portera-il-nome-di-monsignor-luisi-trasferiti-anche-gli-arredi-della-sala-di-corso-numistrano.html" target="_blank" rel="noopener" class="br-press-link">Leggi articolo &rarr;</a>
+          </div>
         </div>
 
-        <!-- SEZIONE CITAZIONI E STAMPA -->
-        <section style="margin-top: 40px;">
-            <h2 class="section-title">Citazioni &amp; Rassegna Stampa</h2>
-            <div class="press-container">
-                <div class="press-card">
-                    <div class="press-quote">
-                        "Appartengo a una generazione che ha perso fiducia in molte istituzioni. Ma se c'è un'istituzione che deve restare credibile, è la Giustizia. Non si tratta di essere contro qualcuno, ma di garantire equilibrio, responsabilità e trasparenza."
-                    </div>
-                    <div class="press-meta">
-                        <span>— Bruno Rachiele <span class="press-source">| Intervento sulla Riforma della Giustizia</span></span>
-                        <a href="https://lanovitaonline.it/giustizia-la-voce-di-una-generazione-che-chiede-equilibrio-e-responsabilita/" target="_blank" rel="noopener" class="press-link">Leggi articolo</a>
-                    </div>
-                </div>
+        <div class="br-press-item">
+          <p class="br-press-quote">
+            &ldquo;La rappresentanza studentesca non &egrave; un titolo da esibire, ma una responsabilit&agrave; quotidiana al servizio della comunit&agrave; studentesca e del diritto allo studio.&rdquo;
+          </p>
+          <div class="br-press-meta">
+            <span><strong>Bruno Rachiele</strong> &bull; Nota al Consiglio Nazionale degli Studenti</span>
+          </div>
+        </div>
 
-                <div class="press-card">
-                    <div class="press-quote">
-                        "Presente in Aula anche il Rappresentante degli Studenti Bruno Rachiele che ha rivolto un saluto [...] ha sottolineato il dovere di ricordare chi ci ha preceduto e seguire le sue orme."
-                    </div>
-                    <div class="press-meta">
-                        <span>— Bruno Rachiele <span class="press-source">| Dichiarazione alla stampa locale, inaugurazione Sala Consiliare Lamezia Terme</span></span>
-                        <a href="https://www.lametino.it/ultimora/lamezia-l-aula-consiliare-portera-il-nome-di-monsignor-luisi-trasferiti-anche-gli-arredi-della-sala-di-corso-numistrano.html" target="_blank" rel="noopener" class="press-link">Leggi articolo</a>
-                    </div>
-                </div>
+        <div class="br-press-item">
+          <p class="br-press-quote">
+            &ldquo;Trasporto Pubblico, Diritto allo Studio e Aule Piccolissime, pugno duro di Bruno Rachiele della Consulta studenti Catanzaro.&rdquo;
+          </p>
+          <div class="br-press-meta">
+            <span><strong>Bruno Rachiele</strong> &bull; Consiglio Comunale Straordinario, gennaio 2022</span>
+            <a href="https://www.corrieredellacalabria.it/2022/01/14/tornate-a-scuola-gli-studenti-restano-scettici-ma-la-politica-non-si-scompone-video/" target="_blank" rel="noopener" class="br-press-link">Leggi articolo &rarr;</a>
+          </div>
+        </div>
 
-                <div class="press-card">
-                    <div class="press-quote">
-                        "La rappresentanza studentesca non è un titolo da esibire, ma una responsabilità quotidiana al servizio della comunità studentesca e del diritto allo studio."
-                    </div>
-                    <div class="press-meta">
-                        <span>— Bruno Rachiele <span class="press-source">| Nota al Consiglio Nazionale degli Studenti</span></span>
-                    </div>
-                </div>
+      </div>
+    </section>
 
-                <div class="press-card">
-                    <div class="press-quote">
-                        "Trasporto Pubblico, Diritto allo Studio e Aule Piccolissime, pugno duro di Bruno Rachiele della Consulta studenti Catanzaro."
-                    </div>
-                    <div class="press-meta">
-                        <span>— Bruno Rachiele <span class="press-source">| Consiglio Comunale Straordinario, gennaio 2022</span></span>
-                        <a href="https://www.corrieredellacalabria.it/2022/01/14/tornate-a-scuola-gli-studenti-restano-scettici-ma-la-politica-non-si-scompone-video/" target="_blank" rel="noopener" class="press-link">Leggi articolo</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- GALLERIA FOTOGRAFICA -->
+    <section class="br-bio-section">
+      <h2>Galleria Fotografica</h2>
+      <div class="br-gallery-grid">
+        <div class="br-gallery-item">
+          <img src="foto1.jpg" alt="Bruno Rachiele durante un dibattito sul Referendum della Giustizia" loading="lazy" width="400" height="300">
+          <div class="br-gallery-caption">Iniziative Politiche</div>
+        </div>
+        <div class="br-gallery-item">
+          <img src="foto2.jpg" alt="Bruno Rachiele in campo con l'A.S.D. Pizzo Calcio" loading="lazy" width="400" height="300">
+          <div class="br-gallery-caption">A.S.D. Pizzo Calcio</div>
+        </div>
+        <div class="br-gallery-item">
+          <img src="foto3.jpg" alt="Bruno Rachiele all'inaugurazione dell'anno scolastico a Grugliasco" loading="lazy" width="400" height="300">
+          <div class="br-gallery-caption">Viaggio Istituzionale a Grugliasco</div>
+        </div>
+        <div class="br-gallery-item">
+          <img src="foto4.jpg" alt="Bruno Rachiele intervistato su LaC TV" loading="lazy" width="400" height="300">
+          <div class="br-gallery-caption">Intervento su LaC TV</div>
+        </div>
+        <div class="br-gallery-item">
+          <img src="foto5.jpg" alt="Bruno Rachiele intervistato dal Corriere della Calabria" loading="lazy" width="400" height="300">
+          <div class="br-gallery-caption">Intervista Corriere della Calabria</div>
+        </div>
+        <div class="br-gallery-item">
+          <img src="foto6.jpg" alt="Bruno Rachiele ospite a Buongiorno Regione su RAI 3" loading="lazy" width="400" height="300">
+          <div class="br-gallery-caption">Intervento su Buongiorno Regione RAI 3</div>
+        </div>
+      </div>
+    </section>
 
-        <!-- GALLERIA FOTOGRAFICA -->
-        <section style="margin-top: 40px;">
-            <h2 class="section-title">Galleria Fotografica</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="foto1.jpg" alt="Bruno Rachiele durante un dibattito sul Referendum della Giustizia" loading="lazy" width="400" height="300">
-                    <div class="gallery-caption">Iniziative Politiche</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="foto2.jpg" alt="Bruno Rachiele in campo con l'A.S.D. Pizzo Calcio" loading="lazy" width="400" height="300">
-                    <div class="gallery-caption">A.S.D. Pizzo Calcio</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="foto3.jpg" alt="Bruno Rachiele all'inaugurazione dell'anno scolastico a Grugliasco" loading="lazy" width="400" height="300">
-                    <div class="gallery-caption">Viaggio Istituzionale a Grugliasco</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="foto4.jpg" alt="Bruno Rachiele intervistato su LaC TV" loading="lazy" width="400" height="300">
-                    <div class="gallery-caption">Intervento su LaC TV</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="foto5.jpg" alt="Bruno Rachiele intervistato dal Corriere della Calabria" loading="lazy" width="400" height="300">
-                    <div class="gallery-caption">Intervista Corriere della Calabria</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="foto6.jpg" alt="Bruno Rachiele ospite a Buongiorno Regione su RAI 3" loading="lazy" width="400" height="300">
-                    <div class="gallery-caption">Intervento su Buongiorno Regione RAI 3</div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- COLLEGAMENTO ISTITUZIONALE AL PORTALE -->
+    <section class="br-bio-section">
+      <div class="br-trust-box">
+        <div style="max-width: 520px;">
+          <strong style="font-size: 16px; color: #0f4c81; display: block; margin-bottom: 4px;">Trasparenza Editoriale e Indipendenza</strong>
+          <span style="font-size: 14px; color: #24292f;">
+            <strong>brunorachiele.it</strong> opera in totale autonomia editoriale, senza finanziamenti da partiti o gruppi di interesse, secondo gli standard internazionali della <em>Journalism Trust Initiative (JTI)</em>.
+          </span>
+        </div>
+        <a class="br-btn" href="https://www.brunorachiele.it/p/chi-siamo.html">Identit&agrave; del Progetto &rarr;</a>
+      </div>
+    </section>
 
-    <!-- FOOTER -->
-    <footer>
-        &copy; 2026 Bruno Rachiele &mdash; Biografia Ufficiale &bull; <a href="https://www.brunorachiele.it/p/linea-editoriale.html" target="_blank" rel="noopener">Trasparenza e Linea Editoriale</a>
-    </footer>
-</div>
+  </main>
+
+  <footer class="br-footer">
+    &copy; 2026 Bruno Rachiele &mdash; Biografia Ufficiale &bull;
+    <a href="https://www.brunorachiele.it/">brunorachiele.it</a> &bull;
+    <a href="https://www.brunorachiele.it/p/linea-editoriale.html">Linea Editoriale</a> &bull;
+    <a href="https://www.brunorachiele.it/p/contatti.html">Contatti</a>
+  </footer>
 
 </body>
 </html>
