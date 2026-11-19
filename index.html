@@ -30,82 +30,136 @@
     <meta name="twitter:description" content="Fondatore ed editore di brunorachiele.it, autore, attivista politico e dirigente sportivo.">
     <meta name="twitter:image" content="https://bio.brunorachiele.it/foto_bruno.jpg">
 
-    <!-- DATI STRUTTURATI SCHEMA.ORG (JSON-LD) PER GOOGLE KNOWLEDGE GRAPH & E-E-A-T -->
+    <!-- DATI STRUTTURATI SCHEMA.ORG (@GRAPH JSON-LD) PER GOOGLE KNOWLEDGE GRAPH & E-E-A-T -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "dateCreated": "2025-01-01T00:00:00+01:00",
-      "dateModified": "2026-11-19T12:00:00+01:00",
-      "mainEntity": {
-        "@type": "Person",
-        "@id": "https://bio.brunorachiele.it/#person",
-        "name": "Bruno Rachiele",
-        "givenName": "Bruno",
-        "familyName": "Rachiele",
-        "birthDate": "2004-10-19",
-        "birthPlace": {
-          "@type": "Place",
-          "name": "Soveria Mannelli",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Soveria Mannelli",
-            "addressRegion": "Calabria",
-            "addressCountry": "IT"
+      "@graph": [
+        {
+          "@type": "ProfilePage",
+          "@id": "https://bio.brunorachiele.it/#profilepage",
+          "url": "https://bio.brunorachiele.it/",
+          "name": "Bruno Rachiele | Biografia Ufficiale",
+          "inLanguage": "it-IT",
+          "dateCreated": "2025-01-01T00:00:00+01:00",
+          "dateModified": "2026-11-19T12:25:00+01:00",
+          "mainEntity": {
+            "@id": "https://bio.brunorachiele.it/#person"
           }
         },
-        "nationality": "IT",
-        "image": "https://bio.brunorachiele.it/foto_bruno.jpg",
-        "jobTitle": ["Editore e Fondatore", "Attivista Politico", "Autore", "Dirigente Sportivo"],
-        "description": "Bruno Rachiele (Soveria Mannelli, 19 ottobre 2004) è un editore digitale, fondatore di brunorachiele.it, autore, attivista politico di Fratelli d'Italia, studente di Giurisprudenza presso l'Università Magna Græcia di Catanzaro e dirigente dell'A.S.D. Pizzo Calcio.",
-        "url": "https://bio.brunorachiele.it/",
-        "sameAs": [
-          "https://www.wikidata.org/wiki/Q136450602",
-          "https://www.brunorachiele.it/",
-          "https://www.brunorachiele.it/p/chi-siamo.html",
-          "https://trust.brunorachiele.it/",
-          "https://share.google/8lUOakwkyXK0tAzp6",
-          "https://www.facebook.com/rachielebruno/",
-          "https://www.instagram.com/rachielebruno_ufficiale/",
-          "https://twitter.com/RachieleBruno"
-        ],
-        "worksFor": {
-          "@type": "NewsMediaOrganization",
-          "name": "BrunoRachiele.it",
-          "url": "https://www.brunorachiele.it/",
-          "publishingPrinciples": "https://www.brunorachiele.it/p/linea-editoriale.html"
+        {
+          "@type": "Person",
+          "@id": "https://bio.brunorachiele.it/#person",
+          "name": "Bruno Rachiele",
+          "givenName": "Bruno",
+          "familyName": "Rachiele",
+          "birthDate": "2004-10-19",
+          "birthPlace": {
+            "@type": "Place",
+            "name": "Soveria Mannelli",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Soveria Mannelli",
+              "addressRegion": "Calabria",
+              "addressCountry": "IT"
+            }
+          },
+          "homeLocation": {
+            "@type": "Place",
+            "name": "Catanzaro, Calabria, Italia",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Catanzaro",
+              "addressRegion": "Calabria",
+              "addressCountry": "IT"
+            }
+          },
+          "nationality": {
+            "@type": "Country",
+            "name": "Italia"
+          },
+          "email": "mailto:bruno@brunorachiele.it",
+          "image": "https://bio.brunorachiele.it/foto_bruno.jpg",
+          "jobTitle": [
+            "Editore e Fondatore",
+            "Attivista Politico",
+            "Autore",
+            "Dirigente Sportivo"
+          ],
+          "description": "Bruno Rachiele (Soveria Mannelli, 19 ottobre 2004) è un editore digitale, fondatore di brunorachiele.it, autore, attivista politico di Fratelli d'Italia, studente di Giurisprudenza presso l'Università Magna Græcia di Catanzaro e dirigente dell'A.S.D. Pizzo Calcio.",
+          "url": "https://bio.brunorachiele.it/",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q136450602",
+            "https://www.brunorachiele.it/",
+            "https://www.brunorachiele.it/p/chi-siamo.html",
+            "https://trust.brunorachiele.it/",
+            "https://share.google/8lUOakwkyXK0tAzp6",
+            "https://www.facebook.com/rachielebruno/",
+            "https://www.instagram.com/rachielebruno_ufficiale/",
+            "https://twitter.com/RachieleBruno"
+          ],
+          "knowsAbout": [
+            "Data Journalism",
+            "Sondaggi politici ed elettorali",
+            "Politica italiana",
+            "Diritto della Navigazione Aerea",
+            "Diritto Internazionale",
+            "Diritto Pubblico Comparato",
+            "Dirigenza sportiva"
+          ],
+          "worksFor": {
+            "@type": "NewsMediaOrganization",
+            "@id": "https://www.brunorachiele.it/#organization",
+            "name": "BrunoRachiele.it",
+            "url": "https://www.brunorachiele.it/",
+            "publishingPrinciples": "https://www.brunorachiele.it/p/linea-editoriale.html"
+          },
+          "alumniOf": [
+            {
+              "@type": "EducationalOrganization",
+              "name": "Istituto Tecnico Economico Valentino De Fazio"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Università degli Studi Magna Græcia di Catanzaro"
+            }
+          ],
+          "memberOf": [
+            {
+              "@type": "PoliticalParty",
+              "name": "Fratelli d'Italia"
+            },
+            {
+              "@type": "SportsTeam",
+              "name": "A.S.D. Pizzo Calcio"
+            }
+          ]
         },
-        "alumniOf": [
-          {
-            "@type": "EducationalOrganization",
-            "name": "Istituto Tecnico Economico Valentino De Fazio"
-          },
-          {
-            "@type": "CollegeOrUniversity",
-            "name": "Università degli Studi Magna Græcia di Catanzaro"
+        {
+          "@type": "Book",
+          "@id": "https://bio.brunorachiele.it/#book-rinascita-dalle-ombre",
+          "name": "Rinascita dalle ombre. Superare le avversità e ispirare il cambiamento",
+          "isbn": "979-8858031697",
+          "inLanguage": "it",
+          "url": "https://share.google/Qf3QJ9jUEdGxrPSKt",
+          "sameAs": "https://share.google/Qf3QJ9jUEdGxrPSKt",
+          "author": {
+            "@id": "https://bio.brunorachiele.it/#person"
           }
-        ],
-        "memberOf": [
-          {
-            "@type": "PoliticalParty",
-            "name": "Fratelli d'Italia"
-          },
-          {
-            "@type": "SportsTeam",
-            "name": "A.S.D. Pizzo Calcio"
+        },
+        {
+          "@type": "Book",
+          "@id": "https://bio.brunorachiele.it/#book-haiku",
+          "name": "Haiku – La poesia dell’infinito",
+          "isbn": "979-8345239865",
+          "inLanguage": "it",
+          "url": "https://share.google/rNMFsxN53jlReOJeR",
+          "sameAs": "https://share.google/rNMFsxN53jlReOJeR",
+          "author": {
+            "@id": "https://bio.brunorachiele.it/#person"
           }
-        ],
-        "author": [
-          {
-            "@type": "Book",
-            "name": "Rinascita dalle ombre. Superare le avversità e ispirare il cambiamento"
-          },
-          {
-            "@type": "Book",
-            "name": "Haiku – La poesia dell’infinito"
-          }
-        ]
-      }
+        }
+      ]
     }
     </script>
 
@@ -288,13 +342,22 @@
         padding-left: 18px;
       }
       .br-bio-card ul li {
-        margin-bottom: 7px;
+        margin-bottom: 9px;
         font-size: 14.5px;
         color: #374151;
         line-height: 1.55;
       }
       .br-bio-card ul li:last-child {
         margin-bottom: 0;
+      }
+      .br-isbn-tag {
+        display: inline-block;
+        font-size: 12px;
+        color: #57606a;
+        background: #eef2f6;
+        padding: 1px 7px;
+        border-radius: 4px;
+        margin-top: 3px;
       }
 
       /* CITAZIONI & RASSEGNA STAMPA */
@@ -464,6 +527,7 @@
           <a href="https://www.facebook.com/rachielebruno/" target="_blank" rel="noopener me" class="br-social-chip">Facebook</a>
           <a href="https://www.instagram.com/rachielebruno_ufficiale/" target="_blank" rel="noopener me" class="br-social-chip">Instagram</a>
           <a href="https://twitter.com/RachieleBruno" target="_blank" rel="noopener me" class="br-social-chip">X (Twitter)</a>
+          <a href="mailto:bruno@brunorachiele.it" class="br-social-chip">bruno@brunorachiele.it</a>
         </div>
       </div>
 
@@ -528,8 +592,14 @@
         <div class="br-bio-card">
           <h3>Libri Pubblicati</h3>
           <ul>
-            <li><strong>Rinascita dalle ombre. Superare le avversit&agrave; e ispirare il cambiamento</strong></li>
-            <li><strong>Haiku &ndash; La poesia dell&rsquo;infinito</strong></li>
+            <li>
+              <strong><a href="https://share.google/Qf3QJ9jUEdGxrPSKt" target="_blank" rel="noopener">Rinascita dalle ombre. Superare le avversit&agrave; e ispirare il cambiamento</a></strong><br>
+              <span class="br-isbn-tag">ISBN: 979-8858031697</span>
+            </li>
+            <li>
+              <strong><a href="https://share.google/rNMFsxN53jlReOJeR" target="_blank" rel="noopener">Haiku &ndash; La poesia dell&rsquo;infinito</a></strong><br>
+              <span class="br-isbn-tag">ISBN: 979-8345239865</span>
+            </li>
           </ul>
         </div>
         <div class="br-bio-card">
